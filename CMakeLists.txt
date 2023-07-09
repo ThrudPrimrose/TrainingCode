@@ -22,3 +22,4 @@ else()
 endif()
 
 add_subdirectory(Mutex)
+add_subdirectory(Semaphore)
