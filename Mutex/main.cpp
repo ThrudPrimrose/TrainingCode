@@ -46,11 +46,11 @@ int main(){
     pthread_join( thread2, NULL); 
 
     if (acquisitions_by_thread1 > acquisitions_by_thread2) {
-        std::cout << "C++ style: Thread 1 wins with ";
+        std::cout << "C++ style, " << increment << ": Thread 1 wins with ";
     } else if (acquisitions_by_thread1 < acquisitions_by_thread2) {
-        std::cout << "C++ style: Thread 2 wins with ";
+        std::cout << "C++ style, " << increment << ": Thread 2 wins with ";
     } else {
-        std::cout << "C++ style: It is a stalement with ";
+        std::cout << "C++ style, " << increment << ": It is a stalement with ";
     }
     std::cout << acquisitions_by_thread1 << " to " << acquisitions_by_thread2 << std::endl;
 

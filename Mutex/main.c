@@ -46,11 +46,11 @@ int main(){
     pthread_join( thread2, NULL); 
 
     if (acquisitions_by_thread1 > acquisitions_by_thread2) {
-        printf("C style: Thread 1 wins with %d to %d.\n", acquisitions_by_thread1 , acquisitions_by_thread2);
+        printf("C style, reached %d: Thread 1 wins with %d to %d.\n", increment, acquisitions_by_thread1 , acquisitions_by_thread2);
     } else if (acquisitions_by_thread1 < acquisitions_by_thread2) {
-        printf("C style: Thread 2 wins with %d to %d.\n", acquisitions_by_thread1 , acquisitions_by_thread2);
+        printf("C style, reached %d: Thread 2 wins with %d to %d.\n", increment, acquisitions_by_thread1 , acquisitions_by_thread2);
     } else {
-        printf("C style: It is a stalemate\n");
+        printf("C style, reached %d: It is a stalemate\n", increment);
     }
 
     return 0;
