@@ -12,6 +12,8 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
+set(CMAKE_CXX_FLAGS_DEBUG "-g -fsanitize=address")
+
 set(CMAKE_CONFIGURATION_TYPES "Debug" "Release" CACHE STRING "Enabled build types" FORCE)
 if(NOT CMAKE_BUILD_TYPE OR NOT ${CMAKE_BUILD_TYPE} IN_LIST CMAKE_CONFIGURATION_TYPES)
   set(CMAKE_BUILD_TYPE "Release" CACHE STRING "${CMAKE_CONFIGURATION_TYPES}" FORCE)
@@ -23,3 +25,4 @@ endif()
 
 add_subdirectory(Mutex)
 add_subdirectory(Semaphore)
+add_subdirectory(DoublyLinkedList)

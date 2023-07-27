@@ -6,12 +6,13 @@
 
 const static int value_when_unowned = -1;
 
-struct CMutex {
+struct CMutex
+{
     _Atomic(int) owner_tracker;
 };
 
-struct CMutex* Init_CMutex();
+struct CMutex *Init_CMutex();
 
-bool acquire(struct CMutex* cmutex);
+bool acquire(struct CMutex *cmutex);
 
-bool release(struct CMutex* cmutex);
+bool release(struct CMutex *cmutex);
